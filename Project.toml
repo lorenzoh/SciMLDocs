@@ -1,0 +1,7 @@
+name = "SciMLDocs"
+uuid = "c4026394-66e3-4560-bd56-ec3bb90f955c"
+authors = ["lorenzoh <lorenz.ohly@gmail.com> and contributors"]
+version = "0.1.0"
+
+[compat]
+julia = "1"
