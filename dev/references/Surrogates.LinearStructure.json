@@ -1,0 +1,30 @@
+{
+    "attributes": {
+        "kind": "function",
+        "backlinks": [
+            {
+                "tag": "sourcefile",
+                "title": "Surrogates/src/Surrogates.jl",
+                "docid": "sourcefiles/Surrogates/src/Surrogates.jl"
+            }
+        ],
+        "methods": [
+            {
+                "line": 41,
+                "file": "/Users/lorenz/.julia/packages/Surrogates/zwNvG/src/Surrogates.jl",
+                "method_id": "Surrogates.LinearStructure_1",
+                "symbol_id": "Surrogates.LinearStructure",
+                "filedoc": "sourcefiles/Surrogates/src/Surrogates.jl",
+                "signature": "LinearStructure()"
+            }
+        ],
+        "name": "LinearStructure",
+        "title": "LinearStructure",
+        "symbol_id": "Surrogates.LinearStructure",
+        "public": true,
+        "module_id": "Surrogates"
+    },
+    "tag": "documentation",
+    "children": [],
+    "type": "node"
+}
