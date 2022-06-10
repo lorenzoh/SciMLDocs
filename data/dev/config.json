@@ -1,1 +1,582 @@
-{"linktree":{"LinearSolve":{"Home":"LinearSolve/index.md","Tutorials":{"tutorials/linear.md":"LinearSolve/tutorials/linear.md","tutorials/caching_interface.md":"LinearSolve/tutorials/caching_interface.md"},"Basics":{"basics/LinearProblem.md":"LinearSolve/basics/LinearProblem.md","basics/common_solver_opts.md":"LinearSolve/basics/common_solver_opts.md","basics/CachingAPI.md":"LinearSolve/basics/CachingAPI.md","basics/Preconditioners.md":"LinearSolve/basics/Preconditioners.md","basics/FAQ.md":"LinearSolve/basics/FAQ.md"},"Solvers":{"solvers/solvers.md":"LinearSolve/solvers/solvers.md"},"Advanced":{"advanced/developing.md":"LinearSolve/advanced/developing.md","advanced/custom.md":"LinearSolve/advanced/custom.md"}},"NonlinearSolve":{"Home":"NonlinearSolve/index.md","Tutorials":{"tutorials/nonlinear.md":"NonlinearSolve/tutorials/nonlinear.md","tutorials/iterator_interface.md":"NonlinearSolve/tutorials/iterator_interface.md"},"Basics":{"basics/NonlinearProblem.md":"NonlinearSolve/basics/NonlinearProblem.md","basics/NonlinearFunctions.md":"NonlinearSolve/basics/NonlinearFunctions.md","basics/FAQ.md":"NonlinearSolve/basics/FAQ.md"},"Solvers":{"solvers/NonlinearSystemSolvers.md":"NonlinearSolve/solvers/NonlinearSystemSolvers.md","solvers/BracketingSolvers.md":"NonlinearSolve/solvers/BracketingSolvers.md"}},"SciMLBase":{"Home":"SciMLBase/index.md","Interfaces":{"interfaces/Problems.md":"SciMLBase/interfaces/Problems.md","interfaces/SciMLFunctions.md":"SciMLBase/interfaces/SciMLFunctions.md","interfaces/Algorithms.md":"SciMLBase/interfaces/Algorithms.md","interfaces/Solutions.md":"SciMLBase/interfaces/Solutions.md","interfaces/Init_Solve.md":"SciMLBase/interfaces/Init_Solve.md","interfaces/Common_Keywords.md":"SciMLBase/interfaces/Common_Keywords.md","interfaces/Differentiation.md":"SciMLBase/interfaces/Differentiation.md","interfaces/PDE.md":"SciMLBase/interfaces/PDE.md"},"Fundamentals":{"fundamentals/FAQ.md":"SciMLBase/fundamentals/FAQ.md"}}},"columnWidth":650,"title":"SciML documentation","defaultDocument":"NonlinearSolve/index.md"}
+{
+    "linktree": {
+        "Equation Solvers": {
+            "LinearSolve": {
+                "Home": "LinearSolve/index.md",
+                "Tutorials": {
+                    "tutorials/linear.md": "LinearSolve/tutorials/linear.md",
+                    "tutorials/caching_interface.md": "LinearSolve/tutorials/caching_interface.md"
+                },
+                "Basics": {
+                    "basics/LinearProblem.md": "LinearSolve/basics/LinearProblem.md",
+                    "basics/common_solver_opts.md": "LinearSolve/basics/common_solver_opts.md",
+                    "basics/CachingAPI.md": "LinearSolve/basics/CachingAPI.md",
+                    "basics/Preconditioners.md": "LinearSolve/basics/Preconditioners.md",
+                    "basics/FAQ.md": "LinearSolve/basics/FAQ.md"
+                },
+                "Solvers": {
+                    "solvers/solvers.md": "LinearSolve/solvers/solvers.md"
+                },
+                "Advanced": {
+                    "advanced/developing.md": "LinearSolve/advanced/developing.md",
+                    "advanced/custom.md": "LinearSolve/advanced/custom.md"
+                }
+            },
+            "NonlinearSolve": {
+                "Home": "NonlinearSolve/index.md",
+                "Tutorials": {
+                    "tutorials/nonlinear.md": "NonlinearSolve/tutorials/nonlinear.md",
+                    "tutorials/iterator_interface.md": "NonlinearSolve/tutorials/iterator_interface.md"
+                },
+                "Basics": {
+                    "basics/NonlinearProblem.md": "NonlinearSolve/basics/NonlinearProblem.md",
+                    "basics/NonlinearFunctions.md": "NonlinearSolve/basics/NonlinearFunctions.md",
+                    "basics/FAQ.md": "NonlinearSolve/basics/FAQ.md"
+                },
+                "Solvers": {
+                    "solvers/NonlinearSystemSolvers.md": "NonlinearSolve/solvers/NonlinearSystemSolvers.md",
+                    "solvers/BracketingSolvers.md": "NonlinearSolve/solvers/BracketingSolvers.md"
+                }
+            },
+            "DifferentialEquations": {
+                "DifferentialEquations.jl: Scientific Machine Learning (SciML) Enabled Simulation and Estimation": "DiffEqDocs/index.md",
+                "Tutorials": {
+                    "tutorials/ode_example.md": "DiffEqDocs/tutorials/ode_example.md",
+                    "tutorials/faster_ode_example.md": "DiffEqDocs/tutorials/faster_ode_example.md",
+                    "tutorials/advanced_ode_example.md": "DiffEqDocs/tutorials/advanced_ode_example.md",
+                    "tutorials/sde_example.md": "DiffEqDocs/tutorials/sde_example.md",
+                    "tutorials/rode_example.md": "DiffEqDocs/tutorials/rode_example.md",
+                    "tutorials/dde_example.md": "DiffEqDocs/tutorials/dde_example.md",
+                    "tutorials/dae_example.md": "DiffEqDocs/tutorials/dae_example.md",
+                    "tutorials/discrete_stochastic_example.md": "DiffEqDocs/tutorials/discrete_stochastic_example.md",
+                    "tutorials/jump_diffusion.md": "DiffEqDocs/tutorials/jump_diffusion.md",
+                    "tutorials/bvp_example.md": "DiffEqDocs/tutorials/bvp_example.md",
+                    "tutorials/additional.md": "DiffEqDocs/tutorials/additional.md"
+                },
+                "Basics": {
+                    "basics/overview.md": "DiffEqDocs/basics/overview.md",
+                    "basics/common_solver_opts.md": "DiffEqDocs/basics/common_solver_opts.md",
+                    "basics/solution.md": "DiffEqDocs/basics/solution.md",
+                    "basics/plot.md": "DiffEqDocs/basics/plot.md",
+                    "basics/integrator.md": "DiffEqDocs/basics/integrator.md",
+                    "basics/problem.md": "DiffEqDocs/basics/problem.md",
+                    "basics/faq.md": "DiffEqDocs/basics/faq.md",
+                    "basics/compatibility_chart.md": "DiffEqDocs/basics/compatibility_chart.md"
+                },
+                "Problem Types": {
+                    "types/discrete_types.md": "DiffEqDocs/types/discrete_types.md",
+                    "types/ode_types.md": "DiffEqDocs/types/ode_types.md",
+                    "types/nonautonomous_linear_ode.md": "DiffEqDocs/types/nonautonomous_linear_ode.md",
+                    "types/dynamical_types.md": "DiffEqDocs/types/dynamical_types.md",
+                    "types/split_ode_types.md": "DiffEqDocs/types/split_ode_types.md",
+                    "types/steady_state_types.md": "DiffEqDocs/types/steady_state_types.md",
+                    "types/bvp_types.md": "DiffEqDocs/types/bvp_types.md",
+                    "types/sde_types.md": "DiffEqDocs/types/sde_types.md",
+                    "types/sdae_types.md": "DiffEqDocs/types/sdae_types.md",
+                    "types/rode_types.md": "DiffEqDocs/types/rode_types.md",
+                    "types/dde_types.md": "DiffEqDocs/types/dde_types.md",
+                    "types/sdde_types.md": "DiffEqDocs/types/sdde_types.md",
+                    "types/dae_types.md": "DiffEqDocs/types/dae_types.md",
+                    "types/jump_types.md": "DiffEqDocs/types/jump_types.md"
+                },
+                "Solver Algorithms": {
+                    "solvers/discrete_solve.md": "DiffEqDocs/solvers/discrete_solve.md",
+                    "solvers/ode_solve.md": "DiffEqDocs/solvers/ode_solve.md",
+                    "solvers/nonautonomous_linear_ode.md": "DiffEqDocs/solvers/nonautonomous_linear_ode.md",
+                    "solvers/dynamical_solve.md": "DiffEqDocs/solvers/dynamical_solve.md",
+                    "solvers/split_ode_solve.md": "DiffEqDocs/solvers/split_ode_solve.md",
+                    "solvers/steady_state_solve.md": "DiffEqDocs/solvers/steady_state_solve.md",
+                    "solvers/bvp_solve.md": "DiffEqDocs/solvers/bvp_solve.md",
+                    "solvers/jump_solve.md": "DiffEqDocs/solvers/jump_solve.md",
+                    "solvers/sde_solve.md": "DiffEqDocs/solvers/sde_solve.md",
+                    "solvers/sdae_solve.md": "DiffEqDocs/solvers/sdae_solve.md",
+                    "solvers/rode_solve.md": "DiffEqDocs/solvers/rode_solve.md",
+                    "solvers/dde_solve.md": "DiffEqDocs/solvers/dde_solve.md",
+                    "solvers/sdde_solve.md": "DiffEqDocs/solvers/sdde_solve.md",
+                    "solvers/dae_solve.md": "DiffEqDocs/solvers/dae_solve.md",
+                    "solvers/benchmarks.md": "DiffEqDocs/solvers/benchmarks.md"
+                },
+                "Additional Features": {
+                    "features/performance_overloads.md": "DiffEqDocs/features/performance_overloads.md",
+                    "features/diffeq_arrays.md": "DiffEqDocs/features/diffeq_arrays.md",
+                    "features/diffeq_operator.md": "DiffEqDocs/features/diffeq_operator.md",
+                    "features/noise_process.md": "DiffEqDocs/features/noise_process.md",
+                    "features/linear_nonlinear.md": "DiffEqDocs/features/linear_nonlinear.md",
+                    "features/callback_functions.md": "DiffEqDocs/features/callback_functions.md",
+                    "features/callback_library.md": "DiffEqDocs/features/callback_library.md",
+                    "features/ensemble.md": "DiffEqDocs/features/ensemble.md",
+                    "features/io.md": "DiffEqDocs/features/io.md",
+                    "features/low_dep.md": "DiffEqDocs/features/low_dep.md",
+                    "features/progress_bar.md": "DiffEqDocs/features/progress_bar.md"
+                },
+                "Analysis Tools": {
+                    "analysis/parameterized_functions.md": "DiffEqDocs/analysis/parameterized_functions.md",
+                    "analysis/parameter_estimation.md": "DiffEqDocs/analysis/parameter_estimation.md",
+                    "analysis/bifurcation.md": "DiffEqDocs/analysis/bifurcation.md",
+                    "analysis/sensitivity.md": "DiffEqDocs/analysis/sensitivity.md",
+                    "analysis/global_sensitivity.md": "DiffEqDocs/analysis/global_sensitivity.md",
+                    "analysis/uncertainty_quantification.md": "DiffEqDocs/analysis/uncertainty_quantification.md",
+                    "analysis/neural_networks.md": "DiffEqDocs/analysis/neural_networks.md",
+                    "analysis/dev_and_test.md": "DiffEqDocs/analysis/dev_and_test.md"
+                },
+                "Domain Modeling Tools": {
+                    "models/multiscale.md": "DiffEqDocs/models/multiscale.md",
+                    "models/physical.md": "DiffEqDocs/models/physical.md",
+                    "models/financial.md": "DiffEqDocs/models/financial.md",
+                    "models/chemical_reactions.md": "DiffEqDocs/models/chemical_reactions.md",
+                    "models/external_modeling.md": "DiffEqDocs/models/external_modeling.md"
+                },
+                "Extra Details": {
+                    "extras/timestepping.md": "DiffEqDocs/extras/timestepping.md"
+                }
+            },
+            "Integrals": {
+                "Home": "Integrals/index.md",
+                "Tutorials": {
+                    "tutorials/numerical_integrals.md": "Integrals/tutorials/numerical_integrals.md",
+                    "tutorials/differentiating_integrals.md": "Integrals/tutorials/differentiating_integrals.md"
+                },
+                "Basics": {
+                    "basics/IntegralProblem.md": "Integrals/basics/IntegralProblem.md",
+                    "basics/solve.md": "Integrals/basics/solve.md",
+                    "basics/FAQ.md": "Integrals/basics/FAQ.md"
+                },
+                "Solvers": {
+                    "solvers/IntegralSolvers.md": "Integrals/solvers/IntegralSolvers.md"
+                }
+            },
+            "Optimization": {
+                "Optimization.jl: A Unified Optimization Package": "Optimization/index.md",
+                "Tutorials": {
+                    "Basic usage": "Optimization/tutorials/intro.md",
+                    "Rosenbrock function": "Optimization/tutorials/rosenbrock.md",
+                    "Minibatch": "Optimization/tutorials/minibatch.md",
+                    "Symbolic Modeling": "Optimization/tutorials/symbolic.md"
+                },
+                "API": {
+                    "OptimizationProblem": "Optimization/API/optimization_problem.md",
+                    "OptimizationFunction": "Optimization/API/optimization_function.md",
+                    "solve": "Optimization/API/solve.md",
+                    "ModelingToolkit Integration": "Optimization/API/modelingtoolkit.md"
+                },
+                "Optimizer Packages": {
+                    "BlackBoxOptim.jl": "Optimization/optimization_packages/blackboxoptim.md",
+                    "CMAEvolutionStrategy.jl": "Optimization/optimization_packages/cmaevolutionstrategy.md",
+                    "Evolutionary.jl": "Optimization/optimization_packages/evolutionary.md",
+                    "Flux.jl": "Optimization/optimization_packages/flux.md",
+                    "GCMAES.jl": "Optimization/optimization_packages/gcmaes.md",
+                    "MathOptInterface.jl": "Optimization/optimization_packages/mathoptinterface.md",
+                    "MultistartOptimization.jl": "Optimization/optimization_packages/multistartoptimization.md",
+                    "Metaheuristics.jl": "Optimization/optimization_packages/metaheuristics.md",
+                    "NOMAD.jl": "Optimization/optimization_packages/nomad.md",
+                    "NLopt.jl": "Optimization/optimization_packages/nlopt.md",
+                    "Nonconvex.jl": "Optimization/optimization_packages/nonconvex.md",
+                    "Optim.jl": "Optimization/optimization_packages/optim.md",
+                    "QuadDIRECT.jl": "Optimization/optimization_packages/quaddirect.md"
+                }
+            }
+        },
+        "Partial Differential Equation Solvers": {
+            "MethodOfLines": {
+                "MethodOfLines.jl: Automated Finite Difference for Phyiscs-Informed Learning": "MethodOfLines/index.md",
+                "Tutorials": {
+                    "tutorials/brusselator.md": "MethodOfLines/tutorials/brusselator.md",
+                    "tutorials/heat.md": "MethodOfLines/tutorials/heat.md",
+                    "tutorials/params.md": "MethodOfLines/tutorials/params.md",
+                    "tutorials/heatss.md": "MethodOfLines/tutorials/heatss.md",
+                    "tutorials/icbc_sampled.md": "MethodOfLines/tutorials/icbc_sampled.md"
+                },
+                "MOLFiniteDifference": "MethodOfLines/MOLFiniteDifference.md",
+                "Grid and Solution Retrieval": "MethodOfLines/get_grid.md",
+                "Boundary Conditions": "MethodOfLines/boundary_conditions.md",
+                "Non-Uniform Rectilinear Grids": "MethodOfLines/nonuniform.md",
+                "Curvilinear Grids": "MethodOfLines/curvilinear_grids.md",
+                "How it Works": "MethodOfLines/howitworks.md",
+                "Notes for Developers: Implement a Scheme": "MethodOfLines/devnotes.md",
+                "Generated Examples": {
+                    "generated/bruss_code.md": "MethodOfLines/generated/bruss_code.md",
+                    "generated/bruss_ode_eqs.md": "MethodOfLines/generated/bruss_ode_eqs.md"
+                }
+            },
+            "NeuralPDE": {
+                "NeuralPDE.jl: Scientific Machine Learning (SciML) for Partial Differential Equations": "NeuralPDE/index.md",
+                "Physics-Informed Neural Network Tutorials": {
+                    "pinn/poisson.md": "NeuralPDE/pinn/poisson.md",
+                    "pinn/wave.md": "NeuralPDE/pinn/wave.md",
+                    "pinn/2D.md": "NeuralPDE/pinn/2D.md",
+                    "pinn/system.md": "NeuralPDE/pinn/system.md",
+                    "pinn/3rd.md": "NeuralPDE/pinn/3rd.md",
+                    "pinn/low_level.md": "NeuralPDE/pinn/low_level.md",
+                    "pinn/ks.md": "NeuralPDE/pinn/ks.md",
+                    "pinn/fp.md": "NeuralPDE/pinn/fp.md",
+                    "pinn/parm_estim.md": "NeuralPDE/pinn/parm_estim.md",
+                    "pinn/heterogeneous.md": "NeuralPDE/pinn/heterogeneous.md",
+                    "pinn/integro_diff.md": "NeuralPDE/pinn/integro_diff.md",
+                    "pinn/debugging.md": "NeuralPDE/pinn/debugging.md",
+                    "pinn/neural_adapter.md": "NeuralPDE/pinn/neural_adapter.md"
+                },
+                "Specialized Neural PDE Tutorials": {
+                    "examples/100_HJB.md": "NeuralPDE/examples/100_HJB.md",
+                    "examples/blackscholes.md": "NeuralPDE/examples/blackscholes.md",
+                    "examples/kolmogorovbackwards.md": "NeuralPDE/examples/kolmogorovbackwards.md",
+                    "examples/optimal_stopping_american.md": "NeuralPDE/examples/optimal_stopping_american.md"
+                },
+                "Specialized Neural ODE Tutorials": {
+                    "examples/ode.md": "NeuralPDE/examples/ode.md",
+                    "examples/nnrode_example.md": "NeuralPDE/examples/nnrode_example.md"
+                },
+                "API Documentation": {
+                    "solvers/pinns.md": "NeuralPDE/solvers/pinns.md",
+                    "solvers/deep_fbsde.md": "NeuralPDE/solvers/deep_fbsde.md",
+                    "solvers/kolmogorovbackwards_solver.md": "NeuralPDE/solvers/kolmogorovbackwards_solver.md",
+                    "solvers/optimal_stopping.md": "NeuralPDE/solvers/optimal_stopping.md",
+                    "solvers/ode.md": "NeuralPDE/solvers/ode.md",
+                    "solvers/nnrode.md": "NeuralPDE/solvers/nnrode.md"
+                }
+            },
+            "NeuralOperators": {
+                "Home": "NeuralOperators/index.md",
+                "Introduction": "NeuralOperators/introduction.md",
+                "APIs": "NeuralOperators/apis.md",
+                "References": "NeuralOperators/references.md"
+            },
+            "FEniCS": "FEniCS",
+            "DiffEqOperators": {
+                "DiffEqOperators.jl: Linear operators for Scientific Machine Learning": "DiffEqOperators/index.md",
+                "Operator Tutorials": {
+                    "operator_tutorials/kdv.md": "DiffEqOperators/operator_tutorials/kdv.md"
+                },
+                "Operators": {
+                    "operators/operator_overview.md": "DiffEqOperators/operators/operator_overview.md",
+                    "operators/derivative_operators.md": "DiffEqOperators/operators/derivative_operators.md",
+                    "operators/vector_calculus_operators.md": "DiffEqOperators/operators/vector_calculus_operators.md",
+                    "operators/vector_jacobian_product.md": "DiffEqOperators/operators/vector_jacobian_product.md",
+                    "operators/jacobian_vector_product.md": "DiffEqOperators/operators/jacobian_vector_product.md",
+                    "operators/matrix_free_operators.md": "DiffEqOperators/operators/matrix_free_operators.md"
+                },
+                "Nonlinear Derivatives": {
+                    "nonlinear_derivatives/nonlinear_diffusion.md": "DiffEqOperators/nonlinear_derivatives/nonlinear_diffusion.md"
+                }
+            }
+        },
+        "Modeling Tools": {
+            "ModelingToolkit": {
+                "Home": "ModelingToolkit/index.md",
+                "Symbolic Modeling Tutorials": {
+                    "tutorials/ode_modeling.md": "ModelingToolkit/tutorials/ode_modeling.md",
+                    "tutorials/spring_mass.md": "ModelingToolkit/tutorials/spring_mass.md",
+                    "tutorials/acausal_components.md": "ModelingToolkit/tutorials/acausal_components.md",
+                    "tutorials/higher_order.md": "ModelingToolkit/tutorials/higher_order.md",
+                    "tutorials/tearing_parallelism.md": "ModelingToolkit/tutorials/tearing_parallelism.md",
+                    "tutorials/nonlinear.md": "ModelingToolkit/tutorials/nonlinear.md",
+                    "tutorials/optimization.md": "ModelingToolkit/tutorials/optimization.md",
+                    "tutorials/stochastic_diffeq.md": "ModelingToolkit/tutorials/stochastic_diffeq.md",
+                    "tutorials/nonlinear_optimal_control.md": "ModelingToolkit/tutorials/nonlinear_optimal_control.md",
+                    "tutorials/parameter_identifiability.md": "ModelingToolkit/tutorials/parameter_identifiability.md"
+                },
+                "ModelingToolkitize Tutorials": {
+                    "mtkitize_tutorials/modelingtoolkitize.md": "ModelingToolkit/mtkitize_tutorials/modelingtoolkitize.md",
+                    "mtkitize_tutorials/modelingtoolkitize_index_reduction.md": "ModelingToolkit/mtkitize_tutorials/modelingtoolkitize_index_reduction.md",
+                    "mtkitize_tutorials/sparse_jacobians.md": "ModelingToolkit/mtkitize_tutorials/sparse_jacobians.md"
+                },
+                "Basics": {
+                    "basics/AbstractSystem.md": "ModelingToolkit/basics/AbstractSystem.md",
+                    "basics/ContextualVariables.md": "ModelingToolkit/basics/ContextualVariables.md",
+                    "basics/Variable_metadata.md": "ModelingToolkit/basics/Variable_metadata.md",
+                    "basics/Composition.md": "ModelingToolkit/basics/Composition.md",
+                    "basics/Validation.md": "ModelingToolkit/basics/Validation.md",
+                    "basics/DependencyGraphs.md": "ModelingToolkit/basics/DependencyGraphs.md",
+                    "basics/FAQ.md": "ModelingToolkit/basics/FAQ.md"
+                },
+                "System Types": {
+                    "systems/ODESystem.md": "ModelingToolkit/systems/ODESystem.md",
+                    "systems/SDESystem.md": "ModelingToolkit/systems/SDESystem.md",
+                    "systems/JumpSystem.md": "ModelingToolkit/systems/JumpSystem.md",
+                    "systems/NonlinearSystem.md": "ModelingToolkit/systems/NonlinearSystem.md",
+                    "systems/OptimizationSystem.md": "ModelingToolkit/systems/OptimizationSystem.md",
+                    "systems/ControlSystem.md": "ModelingToolkit/systems/ControlSystem.md",
+                    "systems/PDESystem.md": "ModelingToolkit/systems/PDESystem.md"
+                },
+                "comparison.md": "ModelingToolkit/comparison.md",
+                "internals.md": "ModelingToolkit/internals.md"
+            },
+            "Catalyst": {
+                "Home": "Catalyst/index.md",
+                "Tutorials": {
+                    "tutorials/using_catalyst.md": "Catalyst/tutorials/using_catalyst.md",
+                    "tutorials/dsl.md": "Catalyst/tutorials/dsl.md",
+                    "tutorials/reaction_systems.md": "Catalyst/tutorials/reaction_systems.md",
+                    "tutorials/basic_examples.md": "Catalyst/tutorials/basic_examples.md",
+                    "tutorials/compositional_modeling.md": "Catalyst/tutorials/compositional_modeling.md",
+                    "tutorials/symbolic_stoich.md": "Catalyst/tutorials/symbolic_stoich.md",
+                    "tutorials/bifurcation_diagram.md": "Catalyst/tutorials/bifurcation_diagram.md",
+                    "tutorials/parameter_estimation.md": "Catalyst/tutorials/parameter_estimation.md",
+                    "tutorials/generating_reactions_programmatically.md": "Catalyst/tutorials/generating_reactions_programmatically.md"
+                },
+                "FAQs": "Catalyst/faqs.md",
+                "API": {
+                    "api/catalyst_api.md": "Catalyst/api/catalyst_api.md"
+                }
+            },
+            "ParameterizedFunctions": {
+                "Home": "ParameterizedFunctions/index.md",
+                "ode_def.md": "ParameterizedFunctions/ode_def.md"
+            }
+        },
+        "Inverse Problems": {
+            "DiffEqSensitivity": {
+                "DiffEqSensitivity.jl: Automatic Differentiation and Adjoints for (Differential) Equation Solvers": "DiffEqSensitivity/index.md",
+                "Tutorials": {
+                    "Differentiating Ordinary Differential Equations (ODE) Tutorials": {
+                        "ad_examples/differentiating_ode.md": "DiffEqSensitivity/ad_examples/differentiating_ode.md",
+                        "ad_examples/direct_sensitivity.md": "DiffEqSensitivity/ad_examples/direct_sensitivity.md",
+                        "ad_examples/adjoint_continuous_functional.md": "DiffEqSensitivity/ad_examples/adjoint_continuous_functional.md",
+                        "ad_examples/chaotic_ode.md": "DiffEqSensitivity/ad_examples/chaotic_ode.md"
+                    },
+                    "Fitting Ordinary Differential Equation (ODE) Tutorials": {
+                        "ode_fitting/optimization_ode.md": "DiffEqSensitivity/ode_fitting/optimization_ode.md",
+                        "ode_fitting/stiff_ode_fit.md": "DiffEqSensitivity/ode_fitting/stiff_ode_fit.md",
+                        "ode_fitting/exogenous_input.md": "DiffEqSensitivity/ode_fitting/exogenous_input.md",
+                        "ode_fitting/data_parallel.md": "DiffEqSensitivity/ode_fitting/data_parallel.md",
+                        "ode_fitting/prediction_error_method.md": "DiffEqSensitivity/ode_fitting/prediction_error_method.md",
+                        "ode_fitting/second_order_adjoints.md": "DiffEqSensitivity/ode_fitting/second_order_adjoints.md",
+                        "ode_fitting/second_order_neural.md": "DiffEqSensitivity/ode_fitting/second_order_neural.md"
+                    },
+                    "Training Techniques and Tips": {
+                        "training_tips/local_minima.md": "DiffEqSensitivity/training_tips/local_minima.md",
+                        "training_tips/divergence.md": "DiffEqSensitivity/training_tips/divergence.md",
+                        "training_tips/multiple_nn.md": "DiffEqSensitivity/training_tips/multiple_nn.md"
+                    },
+                    "Neural Ordinary Differential Equation (Neural ODE) Tutorials": {
+                        "neural_ode/neural_ode_galacticoptim.md": "DiffEqSensitivity/neural_ode/neural_ode_galacticoptim.md",
+                        "neural_ode/neural_ode_flux.md": "DiffEqSensitivity/neural_ode/neural_ode_flux.md",
+                        "neural_ode/mnist_neural_ode.md": "DiffEqSensitivity/neural_ode/mnist_neural_ode.md",
+                        "neural_ode/mnist_conv_neural_ode.md": "DiffEqSensitivity/neural_ode/mnist_conv_neural_ode.md",
+                        "neural_ode/GPUs.md": "DiffEqSensitivity/neural_ode/GPUs.md",
+                        "neural_ode/neural_gde.md": "DiffEqSensitivity/neural_ode/neural_gde.md",
+                        "neural_ode/minibatch.md": "DiffEqSensitivity/neural_ode/minibatch.md"
+                    },
+                    "Stochastic Differential Equation (SDE) Tutorials": {
+                        "sde_fitting/optimization_sde.md": "DiffEqSensitivity/sde_fitting/optimization_sde.md",
+                        "sde_fitting/neural_sde.md": "DiffEqSensitivity/sde_fitting/neural_sde.md"
+                    },
+                    "Delay Differential Equation (DDE) Tutorials": {
+                        "dde_fitting/delay_diffeq.md": "DiffEqSensitivity/dde_fitting/delay_diffeq.md"
+                    },
+                    "Differential-Algebraic Equation (DAE) Tutorials": {
+                        "dae_fitting/physical_constraints.md": "DiffEqSensitivity/dae_fitting/physical_constraints.md"
+                    },
+                    "Partial Differential Equation (PDE) Tutorials": {
+                        "pde_fitting/pde_constrained.md": "DiffEqSensitivity/pde_fitting/pde_constrained.md"
+                    },
+                    "Hybrid and Jump Equation Tutorials": {
+                        "hybrid_jump_fitting/hybrid_diffeq.md": "DiffEqSensitivity/hybrid_jump_fitting/hybrid_diffeq.md",
+                        "hybrid_jump_fitting/bouncing_ball.md": "DiffEqSensitivity/hybrid_jump_fitting/bouncing_ball.md"
+                    },
+                    "Bayesian Estimation Tutorials": {
+                        "bayesian/turing_bayesian.md": "DiffEqSensitivity/bayesian/turing_bayesian.md",
+                        "bayesian/BayesianNODE_NUTS.md": "DiffEqSensitivity/bayesian/BayesianNODE_NUTS.md",
+                        "bayesian/BayesianNODE_SGLD.md": "DiffEqSensitivity/bayesian/BayesianNODE_SGLD.md"
+                    },
+                    "Optimal and Model Predictive Control Tutorials": {
+                        "optimal_control/optimal_control.md": "DiffEqSensitivity/optimal_control/optimal_control.md",
+                        "optimal_control/feedback_control.md": "DiffEqSensitivity/optimal_control/feedback_control.md",
+                        "optimal_control/SDE_control.md": "DiffEqSensitivity/optimal_control/SDE_control.md"
+                    }
+                },
+                "Manual and APIs": {
+                    "manual/differential_equation_sensitivities.md": "DiffEqSensitivity/manual/differential_equation_sensitivities.md",
+                    "manual/nonlinear_solve_sensitivities.md": "DiffEqSensitivity/manual/nonlinear_solve_sensitivities.md",
+                    "manual/direct_forward_sensitivity.md": "DiffEqSensitivity/manual/direct_forward_sensitivity.md",
+                    "manual/direct_adjoint_sensitivities.md": "DiffEqSensitivity/manual/direct_adjoint_sensitivities.md"
+                },
+                "Benchmarks": "DiffEqSensitivity/Benchmark.md",
+                "Sensitivity Math Details": "DiffEqSensitivity/sensitivity_math.md"
+            }
+        },
+        "AbstractArray Libraries": {
+            "RecursiveArrayTools": {
+                "Home": "RecursiveArrayTools/index.md",
+                "array_types.md": "RecursiveArrayTools/array_types.md",
+                "recursive_array_functions.md": "RecursiveArrayTools/recursive_array_functions.md"
+            },
+            "LabelledArrays": {
+                "Home": "LabelledArrays/index.md",
+                "Example: Nice DiffEq Syntax Without A DSL": "LabelledArrays/Example_dsl.md",
+                "SLArrays": "LabelledArrays/SLArrays.md",
+                "LArrays": "LabelledArrays/LArrays.md",
+                "Relation to NamedTuples": "LabelledArrays/NamedTuples_relation.md",
+                "Note_labelled_slices.md": "LabelledArrays/Note_labelled_slices.md"
+            }
+        },
+        "Uncertainty Quantification": {
+            "PolyChaos": {
+                "index.md": "PolyChaos/index.md",
+                "type_hierarchy.md": "PolyChaos/type_hierarchy.md",
+                "Usage": {
+                    "numerical_integration.md": "PolyChaos/numerical_integration.md",
+                    "quadrature_rules.md": "PolyChaos/quadrature_rules.md",
+                    "orthogonal_polynomials_canonical.md": "PolyChaos/orthogonal_polynomials_canonical.md",
+                    "gaussian_mixture_model.md": "PolyChaos/gaussian_mixture_model.md",
+                    "multiple_discretization.md": "PolyChaos/multiple_discretization.md",
+                    "scalar_products.md": "PolyChaos/scalar_products.md",
+                    "Polynomial Chaos": {
+                        "Basic Usage": "PolyChaos/pce_tutorial.md",
+                        "Chi Squared, One DOF": "PolyChaos/chi_squared_k1.md",
+                        "Chi Squared, Several DOFs": "PolyChaos/chi_squared_k_greater1.md",
+                        "Random ODE": "PolyChaos/random_ode.md"
+                    },
+                    "Optimal Power Flow": "PolyChaos/DCsOPF.md"
+                },
+                "math.md": "PolyChaos/math.md",
+                "functions.md": "PolyChaos/functions.md"
+            }
+        },
+        "Simulation Analysis": {
+            "GlobalSensitivity": {
+                "GlobalSensitivity.jl: Global Sensitivity Analysis (GSA)": "GlobalSensitivity/index.md",
+                "Tutorials": {
+                    "tutorials/parallelized_gsa.md": "GlobalSensitivity/tutorials/parallelized_gsa.md",
+                    "tutorials/juliacon21.md": "GlobalSensitivity/tutorials/juliacon21.md"
+                },
+                "Methods": {
+                    "methods/morris.md": "GlobalSensitivity/methods/morris.md",
+                    "methods/sobol.md": "GlobalSensitivity/methods/sobol.md",
+                    "methods/regression.md": "GlobalSensitivity/methods/regression.md",
+                    "methods/efast.md": "GlobalSensitivity/methods/efast.md",
+                    "methods/delta.md": "GlobalSensitivity/methods/delta.md",
+                    "methods/dgsm.md": "GlobalSensitivity/methods/dgsm.md",
+                    "methods/easi.md": "GlobalSensitivity/methods/easi.md",
+                    "methods/fractional.md": "GlobalSensitivity/methods/fractional.md",
+                    "methods/rbdfast.md": "GlobalSensitivity/methods/rbdfast.md"
+                }
+            }
+        },
+        "Symbolic Analysis": {
+            "SymbolicNumericIntegration": {
+                "Home": "SymbolicNumericIntegration/index.md",
+                "symbolicnumericintegration.md": "SymbolicNumericIntegration/symbolicnumericintegration.md"
+            }
+        },
+        "Interfaces": {
+            "SciMLBase": {
+                "Home": "SciMLBase/index.md",
+                "Interfaces": {
+                    "interfaces/Problems.md": "SciMLBase/interfaces/Problems.md",
+                    "interfaces/SciMLFunctions.md": "SciMLBase/interfaces/SciMLFunctions.md",
+                    "interfaces/Algorithms.md": "SciMLBase/interfaces/Algorithms.md",
+                    "interfaces/Solutions.md": "SciMLBase/interfaces/Solutions.md",
+                    "interfaces/Init_Solve.md": "SciMLBase/interfaces/Init_Solve.md",
+                    "interfaces/Common_Keywords.md": "SciMLBase/interfaces/Common_Keywords.md",
+                    "interfaces/Differentiation.md": "SciMLBase/interfaces/Differentiation.md",
+                    "interfaces/PDE.md": "SciMLBase/interfaces/PDE.md"
+                },
+                "Fundamentals": {
+                    "fundamentals/FAQ.md": "SciMLBase/fundamentals/FAQ.md"
+                }
+            },
+            "SciMLOperators": {
+                "Home": "SciMLOperators/index.md",
+                "interface.md": "SciMLOperators/interface.md",
+                "premade_operators.md": "SciMLOperators/premade_operators.md"
+            },
+            "CommonSolve": {
+                "The Common Solve Interface": "CommonSolve/index.md"
+            }
+        },
+        "Numerical Utilities": {
+            "Surrogates": {
+                "index.md": "Surrogates/index.md",
+                "Tutorials": {
+                    "Basics": "Surrogates/tutorials.md",
+                    "Radials": "Surrogates/radials.md",
+                    "Kriging": "Surrogates/kriging.md",
+                    "Gaussian Process": "Surrogates/abstractgps.md",
+                    "Lobachevsky": "Surrogates/lobachevsky.md",
+                    "Linear": "Surrogates/LinearSurrogate.md",
+                    "InverseDistance": "Surrogates/InverseDistance.md",
+                    "RandomForest": "Surrogates/randomforest.md",
+                    "SecondOrderPolynomial": "Surrogates/secondorderpoly.md",
+                    "NeuralSurrogate": "Surrogates/neural.md",
+                    "Wendland": "Surrogates/wendland.md",
+                    "Polynomial Chaos": "Surrogates/polychaos.md",
+                    "Variable Fidelity": "Surrogates/variablefidelity.md",
+                    "Gradient Enhanced Kriging": "Surrogates/gek.md"
+                },
+                "User guide": {
+                    "Samples": "Surrogates/samples.md",
+                    "Surrogates": "Surrogates/surrogate.md",
+                    "Optimization": "Surrogates/optimizations.md"
+                },
+                "Benchmarks": {
+                    "Sphere function": "Surrogates/sphere_function.md",
+                    "Lp norm": "Surrogates/lp.md",
+                    "Rosenbrock": "Surrogates/rosenbrock.md",
+                    "Tensor product": "Surrogates/tensor_prod.md",
+                    "Cantilever beam": "Surrogates/cantilever.md",
+                    "Water Flow function": "Surrogates/water_flow.md",
+                    "Welded beam function": "Surrogates/welded_beam.md",
+                    "Branin function": "Surrogates/BraninFunction.md",
+                    "Ackley function": "Surrogates/ackley.md",
+                    "Gramacy & Lee Function": "Surrogates/gramacylee.md",
+                    "Salustowicz Benchmark": "Surrogates/Salustowicz.md",
+                    "Multi objective optimization": "Surrogates/multi_objective_opt.md"
+                },
+                "Contributing": "Surrogates/contributing.md"
+            },
+            "ExponentialUtilities": {
+                "Home": "ExponentialUtilities/index.md",
+                "matrix_exponentials.md": "ExponentialUtilities/matrix_exponentials.md",
+                "expv.md": "ExponentialUtilities/expv.md",
+                "arnoldi.md": "ExponentialUtilities/arnoldi.md"
+            },
+            "DiffEqNoiseProcess": {
+                "Home": "DiffEqNoiseProcess/index.md",
+                "noise_processes.md": "DiffEqNoiseProcess/noise_processes.md",
+                "abstract_noise_processes.md": "DiffEqNoiseProcess/abstract_noise_processes.md"
+            },
+            "PoissonRandom": {
+                "Home": "PoissonRandom/index.md",
+                "pois_rand.md": "PoissonRandom/pois_rand.md"
+            },
+            "QuasiMonteCarlo": {
+                "Home": "QuasiMonteCarlo/index.md",
+                "samplers.md": "QuasiMonteCarlo/samplers.md"
+            }
+        },
+        "Machine Learning": {
+            "DiffEqFlux": {
+                "DiffEqFlux.jl: High Level Scientific Machine Learning (SciML) Pre-Built Architectures": "DiffEqFlux/index.md",
+                "Differential Equation Machine Learning Tutorials": {
+                    "examples/neural_ode.md": "DiffEqFlux/examples/neural_ode.md",
+                    "examples/augmented_neural_ode.md": "DiffEqFlux/examples/augmented_neural_ode.md",
+                    "examples/collocation.md": "DiffEqFlux/examples/collocation.md",
+                    "examples/hamiltonian_nn.md": "DiffEqFlux/examples/hamiltonian_nn.md",
+                    "examples/tensor_layer.md": "DiffEqFlux/examples/tensor_layer.md",
+                    "examples/multiple_shooting.md": "DiffEqFlux/examples/multiple_shooting.md"
+                },
+                "Layer APIs": {
+                    "Classical Basis Layers": "DiffEqFlux/layers/BasisLayers.md",
+                    "Tensor Product Layer": "DiffEqFlux/layers/TensorLayer.md",
+                    "Continuous Normalizing Flows Layer": "DiffEqFlux/layers/CNFLayer.md",
+                    "Spline Layer": "DiffEqFlux/layers/SplineLayer.md",
+                    "Neural Differential Equation Layers": "DiffEqFlux/layers/NeuralDELayers.md",
+                    "Hamiltonian Neural Network Layer": "DiffEqFlux/layers/HamiltonianNN.md"
+                },
+                "Utility Function APIs": {
+                    "Smoothed Collocation": "DiffEqFlux/utilities/Collocation.md",
+                    "Multiple Shooting Functionality": "DiffEqFlux/utilities/MultipleShooting.md"
+                }
+            }
+        },
+        "Learning Resources": {},
+        "Developer Documentation": {
+            "SciMLStyle": "SciMLStyle",
+            "COLPRAC": "COLPRAC",
+            "DiffEqDevDocs": "DiffEqDevDocs"
+        }
+    },
+    "columnWidth": 650,
+    "title": "SciML",
+    "defaultDocument": "NonlinearSolve/index.md"
+}
