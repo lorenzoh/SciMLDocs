@@ -5,9 +5,19 @@ the sidebar from the package's "docs/pages.jl" file and stitching them together.
 """
 
 
-readindex(f, pages::Vector) = OrderedDict(
-    (p isa Pair ? p[1] : p) => readindex(f, p)
-   for p in pages)
+function readindex(f, pages::Vector)
+    index = OrderedDict{String, Any}()
+    for page in pages
+        if page isa Pair
+            name, subpage = page
+            index[name] = readindex(f, subpage)
+        else
+            index[string(page)] = readindex(f, page)
+        end
+    end
+    return index
+end
+
 readindex(f, page::String) = f(page)
 function readindex(f, (name, val)::Pair{String, Any})
     if val isa AbstractString
@@ -21,6 +31,7 @@ readindex(page) = readindex(identity, page)
 
 readpkgindex(m::Module, pages) = readindex(f -> joinpath(Pkg.pkgdir(m), "docs", f), pages)
 readpkgindex(m::Module) = readpkgindex(m, loadpkgindex(m))
+readindex(f, m::Module) = readpkgindex(m)
 
 function readpkgindex(ms::Vector{Module})
     Dict(string(m) => readindex(f -> joinpath(string(m), f), loadpkgindex(m))

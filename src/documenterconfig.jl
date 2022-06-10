@@ -8,12 +8,12 @@ configuration.
 !!! warn "pages.jl file"
     Each module must have a "docs/pages.jl" file!
 """
-function DocumenterConfig(ms::Vector{Module}; title = "Documentation", homepage = "README.md")
+function DocumenterConfig(index; title = "Documentation", homepage = "README.md")
     config = Dict(
         "title" => title,
         "defaultDocument" => homepage,
         "columnWidth" => 650,
-        "linktree" => readpkgindex(ms)
+        "linktree" => readindex(index)
     )
     return LoadFrontendConfig(config, "config.json")
 end

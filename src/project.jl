@@ -1,4 +1,4 @@
-function sciml_project(packages::Vector{Module}; kwargs...)
+function sciml_project(packages::Vector{Module}, index = packages; kwargs...)
     Project(
         Pollen.Rewriter[
             # Reads the markdown files in the docs/ folder
