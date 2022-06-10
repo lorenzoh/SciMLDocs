@@ -13,4 +13,4 @@ packages = [SciMLBase, LinearSolve, NonlinearSolve]
 
 project = sciml_project(packages,
                         title = "SciML documentation",
-                        homepage="NonlinearSolve/README.md")
+                        homepage="NonlinearSolve/index.md")
