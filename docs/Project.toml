@@ -1,5 +1,11 @@
 [deps]
+DiffEqBase = "2b5f629d-d688-5b77-993f-72d75c75574e"
+DiffEqFlux = "aae7a2af-3d4f-5e19-a356-7da93b79d9d0"
+DifferentialEquations = "0c46a032-eb83-5123-abaf-570d42b7fbaa"
 JuliaSyntax = "70703baa-626e-46a2-a12c-08ffd08c73b4"
+LinearSolve = "7ed4a6bd-45f5-4d41-b270-4a48e9bafcae"
 ModuleInfo = "3c3ff5e7-c68c-4a09-80d1-9526a1e9878a"
+NonlinearSolve = "8913a72c-1f9b-4ce2-8d82-65094dcecaec"
 Pollen = "c88717ad-5130-4874-a664-5a9aba5ec443"
+SciMLBase = "0bca4576-84f4-4d90-8ffe-ffa030f20462"
 SciMLDocs = "c4026394-66e3-4560-bd56-ec3bb90f955c"
