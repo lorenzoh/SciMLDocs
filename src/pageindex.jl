@@ -29,9 +29,8 @@ end
 readindex(page) = readindex(identity, page)
 
 
-readpkgindex(m::Module, pages) = readindex(f -> joinpath(Pkg.pkgdir(m), "docs", f), pages)
 readpkgindex(m::Module) = readpkgindex(m, loadpkgindex(m))
-readindex(f, m::Module) = readpkgindex(m)
+readindex(f, m::Module) = readindex(p -> joinpath(string(m), p), loadpkgindex(m))
 
 function readpkgindex(ms::Vector{Module})
     Dict(string(m) => readindex(f -> joinpath(string(m), f), loadpkgindex(m))
